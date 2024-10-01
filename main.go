@@ -1,16 +1,17 @@
 package main
 
 import (
-	"github.com/mgranderath/traceroute/methods"
-	"github.com/mgranderath/traceroute/methods/tcp"
-	"github.com/mgranderath/traceroute/methods/udp"
 	"log"
 	"net"
 	"time"
+
+	"github.com/mgranderath/traceroute/methods"
+	"github.com/mgranderath/traceroute/methods/tcp"
+	"github.com/mgranderath/traceroute/methods/udp"
 )
 
 func main() {
-	ip := net.ParseIP("94.140.14.14")
+	ip := net.ParseIP("75.2.98.97")
 	tcpTraceroute := tcp.New(ip, methods.TracerouteConfig{
 		MaxHops:          20,
 		NumMeasurements:  3,
